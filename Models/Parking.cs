@@ -57,5 +57,22 @@ namespace parking_lot_system.Models
                 Console.WriteLine("Sorry, this vehicle is not parked here. Please make sure you have entered the license plate correctly");
             }
         }
+
+        public void ListVehicles()
+        {
+            if (vehicles.Any())
+            {
+                Console.WriteLine("The parked vehicles are:");
+
+                for (int counter = 0; counter < vehicles.Count; counter++ )
+                {
+                    Console.WriteLine($"{vehicles[counter]}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No vehicles are parked");
+            }
+        }
     }
 }
