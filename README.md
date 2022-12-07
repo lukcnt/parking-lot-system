@@ -1,2 +1,7 @@
-# parking-lot-system
-A system for a parking lot that will be used to manage the parked vehicles and perform its operations.
+# Parking lot System
+
+## Background
+
+A system for a parking garage that will be used to manage parked vehicles and perform their operations, 
+such as adding a vehicle, removing a vehicle (and displaying the amount charged during the period), and 
+listing the registered vehicles.
