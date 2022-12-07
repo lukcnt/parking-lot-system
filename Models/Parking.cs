@@ -16,4 +16,21 @@ namespace parking_lot_system.Models
             this.priceInitial = priceInitial;
             this.pricePerHour = pricePerHour;
         }
+
+        public void AddVehicle()
+        {
+            string licensePlate = "";
+
+            Console.WriteLine("Enter the license plate of the vehicle to park: ");
+            licensePlate = Console.ReadLine();
+            if (licensePlate.Length < 8)
+            {
+                Console.WriteLine($"{licensePlate} isn't a valid license plate.");
+            }
+            else
+            {
+                vehicles.Add(licensePlate);
+            }
+        }
+    }
 }
