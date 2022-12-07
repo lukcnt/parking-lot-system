@@ -32,5 +32,30 @@ namespace parking_lot_system.Models
                 vehicles.Add(licensePlate);
             }
         }
+
+        public void RemoveVehicle()
+        {
+            string licensePlate = "";
+
+            Console.WriteLine("Enter the license plate of the vehicle to remove:");
+            licensePlate = Console.ReadLine();
+
+            if (vehicles.Any(item => item.ToUpper() == licensePlate.ToUpper()))
+            {
+                int hours = 0;
+                decimal totalAmount = 0m;
+
+                Console.WriteLine("Enter the amount of hours the vehicle has remained parked:");
+                hours = Convert.ToInt32(Console.ReadLine());
+                totalAmount = priceInitial + (pricePerHour * hours);
+
+                vehicles.Remove(licensePlate);
+                Console.WriteLine($"The vehicle {licensePlate} was removed and total price was: R$ {totalAmount} .");
+            }
+            else
+            {
+                Console.WriteLine("Sorry, this vehicle is not parked here. Please make sure you have entered the license plate correctly");
+            }
+        }
     }
 }
